@@ -1,6 +1,6 @@
 const express =require("express")
 const app=express();
-const port=3000
+const _PORT=3000
 
 const clientRouter=require('./routes/ClientRoute') // importer routes
 const Erreur404 =require('./middlewares/errorMiddleware') // importer ficheer de gestion d'erreur
@@ -14,5 +14,5 @@ app.use(Erreur404);
 
 //Démarrer le serveur
 app.listen(port, () => {
-    console.log(`le serveur démarre sur le port : ${port}`);
+    console.log(`le serveur démarre sur le port : ${_PORT}`);
 });
